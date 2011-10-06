@@ -3,10 +3,10 @@ from django.conf import settings
 
 
 def parse(kwargs):
-    id = kwargs.get('id')
-    width = int(kwargs.get('width',
+    id = kwargs.get('v')
+    width = int(kwargs.get('w',
                            getattr(settings, 'SHORTCODES_YOUTUBE_WIDTH', 425)))
-    height = int(kwargs.get('height', 0))
+    height = int(kwargs.get('h', 0))
     jquery = getattr(settings, 'SHORTCODES_YOUTUBE_JQUERY', False)
 
     if height == 0:

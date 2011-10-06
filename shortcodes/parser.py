@@ -21,10 +21,16 @@ def parse(value):
         if ' ' in item:
             name, space, args = item.partition(' ')
             args = __parse_args__(args)
+        # If shortcode does not use spaces as a separator, it might use equals
+        # signs.
+        elif '=' in item:
+            name, space, args = item.partition('=')
+            args = __parse_args__(args)
         else:
             name = item
             args = {}
 
+        item = re.escape(item)
         try:
             if cache.get(item):
                 parsed = re.sub(r'\[' + item + r'\]', cache.get(item), parsed)
