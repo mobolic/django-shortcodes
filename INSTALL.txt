@@ -1,9 +1,0 @@
-Installing Django Shortcodes
-----------------------------
-
-If you're running a UNIX system, the best thing to do
-is to create a symbolic link from the site-packages directory
-of your Python installation to the shortcodes directory. That
-way, as you download new shortcodes they'll instantly be
-available to all of the projects using the django-shortcodes
-app.
