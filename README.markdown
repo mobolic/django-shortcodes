@@ -24,4 +24,5 @@ repository](https://github.com/martey/django-shortcodes).
  - `SHORTCODES_YOUTUBE_JQUERY`: Boolean whether the
    [jquery.flash plugin](http://jquery-flash.stephenbelanger.com/) is
    available.
+ - `SHORTCODES_YOUTUBE_HEIGHT`: Default height for YouTube videos.
  - `SHORTCODES_YOUTUBE_WIDTH`: Default width for YouTube videos.

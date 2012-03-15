@@ -5,12 +5,10 @@ from django.conf import settings
 def parse(kwargs):
     id = kwargs.get('v')
     width = int(kwargs.get('w',
-                           getattr(settings, 'SHORTCODES_YOUTUBE_WIDTH', 425)))
-    height = int(kwargs.get('h', 0))
+                           getattr(settings, 'SHORTCODES_YOUTUBE_WIDTH', 480)))
+    height = int(kwargs.get('h',
+                          getattr(settings, 'SHORTCODES_YOUTUBE_HEIGHT', 385)))
     jquery = getattr(settings, 'SHORTCODES_YOUTUBE_JQUERY', False)
-
-    if height == 0:
-        height = int(round(width / 425.0 * 344.0))
 
     if jquery:
         html = '<a id="yt_{{ id }}"'
