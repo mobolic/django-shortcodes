@@ -7,7 +7,7 @@ def read(fname):
 
 setup(
     name="django-shortcodes",
-    version="0.2.0",
+    version="0.2.0dev",
     description="WordPress shortcode support for Django",
     author="Mark Steadman",
     author_email="marksteadman@me.com",
