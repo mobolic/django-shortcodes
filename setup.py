@@ -1,9 +1,6 @@
-from distutils.core import setup
-import os
+#!/usr/bin/env python
+from setuptools import setup
 
-
-def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
     name="django-shortcodes",
@@ -20,7 +17,7 @@ setup(
         "shortcodes.parsers",
         "shortcodes.templatetags",
     ],
-    long_description=read("README.markdown"),
+    long_description=open("README").read(),
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Framework :: Django",
