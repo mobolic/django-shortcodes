@@ -12,7 +12,7 @@ setup(
     author="Mark Steadman",
     author_email="marksteadman@me.com",
     maintainer="Martey Dodoo",
-    maintainer_email="martey@marteydodoo.com",
+    maintainer_email="django-shortcodes@marteydodoo.com",
     url="https://github.com/martey/django-shortcodes",
     license="MIT",
     packages=[
