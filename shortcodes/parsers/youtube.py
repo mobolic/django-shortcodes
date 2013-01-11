@@ -4,10 +4,14 @@ from django.conf import settings
 
 def parse(kwargs):
     id = kwargs.get('v')
-    width = int(kwargs.get('w',
-                           getattr(settings, 'SHORTCODES_YOUTUBE_WIDTH', 480)))
-    height = int(kwargs.get('h',
-                          getattr(settings, 'SHORTCODES_YOUTUBE_HEIGHT', 385)))
+    width = int(kwargs.get(
+        'w',
+        getattr(settings, 'SHORTCODES_YOUTUBE_WIDTH', 480))
+    )
+    height = int(kwargs.get(
+        'h',
+        getattr(settings, 'SHORTCODES_YOUTUBE_HEIGHT', 385))
+    )
     jquery = getattr(settings, 'SHORTCODES_YOUTUBE_JQUERY', False)
 
     if jquery:
@@ -38,9 +42,10 @@ def parse(kwargs):
 
     template = Template(html)
     context = Context({
-            'id': id,
-            'width': width,
-            'height': height})
+        'id': id,
+        'width': width,
+        'height': height
+    })
 
     if id:
         return template.render(context)
