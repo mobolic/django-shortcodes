@@ -28,6 +28,15 @@ Usage
 Settings
 ========
 
+Vimeo
+-----
+
+- ``SHORTCODES_VIMEO_HEIGHT``: Default height for Vimeo videos.
+- ``SHORTCODES_VIMEO_WIDTH``: Default width for Vimeo videos.
+
+YouTube
+-------
+
 - ``SHORTCODES_YOUTUBE_JQUERY``: Boolean whether the
   `jquery.flash plugin <http://jquery-flash.stephenbelanger.com/>`_ is
   available.
